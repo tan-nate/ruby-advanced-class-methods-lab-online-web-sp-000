@@ -45,7 +45,7 @@ class Song
   end
   
   def self.new_from_filename(filename)
-    split_filename = filename.split(/(\s-\s)/)
+    split_filename = filename.split(/[-.]/)
     stripped_filename = split_filename.collect{|string| string.strip}
     stripped_filename.delete("mp3")
     artist_name = stripped_filename[0]
